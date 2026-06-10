@@ -871,6 +871,64 @@ section {
 }
 
 /* ============================================
+   SIDEBAR
+============================================ */
+.single-inner {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.widget {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.widget-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-burgundy);
+}
+
+.widget ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-gray-light);
+    font-size: 0.9rem;
+}
+
+.widget ul li:last-child {
+    border-bottom: none;
+}
+
+.widget ul li a:hover {
+    color: var(--color-burgundy);
+}
+
+/* Sidebar responsive */
+@media ( max-width: 1024px ) {
+    .single-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+/* ============================================
    RESPONSIVE — TABLET (max 1024px)
 ============================================ */
 @media ( max-width: 1024px ) {
