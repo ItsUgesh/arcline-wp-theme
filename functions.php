@@ -45,10 +45,10 @@ function arcline_enqueue_assets() {
     // Main theme stylesheet (style.css)
     wp_enqueue_style(
         'arcline-style',
-        get_stylesheet_uri(),
+        get_template_directory_uri() . '/assets/css/main.css',
         array( 'arcline-fonts' ),
         '1.0.0'
-    );
+    ); 
 }
 add_action( 'wp_enqueue_scripts', 'arcline_enqueue_assets' ); //hooks
 
