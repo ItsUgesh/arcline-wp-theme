@@ -80,3 +80,19 @@ function arcline_register_services() {
     register_post_type( 'services', $args );
 }
 add_action( 'init', 'arcline_register_services' );
+
+// ============================================
+// REGISTER SIDEBAR / WIDGET AREA
+// ============================================
+function arcline_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Main Sidebar',
+        'id'            => 'sidebar-1',
+        'description'   => 'Widgets here appear on blog posts.',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ));
+}
+add_action( 'widgets_init', 'arcline_widgets_init' );
