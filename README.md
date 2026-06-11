@@ -70,7 +70,7 @@ git clone https://github.com/ItsUgesh/arcline-wp-theme.git
 
 ## Author
 
-Built by [Ugesh](https://ugeshsomkhada.com.np)
+Built by [Ugesh](https://ugeshsimkhada.com.np)
 
 ## License
 
