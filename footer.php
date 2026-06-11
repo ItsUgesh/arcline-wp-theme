@@ -43,19 +43,19 @@
                 </ul>
             </div>
 
-        </div><!-- /.footer-top -->
+        </div>
 
-        <!-- Copyright Bar -->
+        <!-- Copyright Bar --> 
         <div class="footer-bottom">
             <p class="copyright">
                 &copy; <?php echo date( 'Y' ); ?>
-                <?php bloginfo( 'name' ); ?>.
+                <span class="copyright-name"><?php bloginfo( 'name' ); ?></span>.
                 All rights reserved.
             </p>
             <p class="made-by">
                 Crafted with care by
                 <a href="https://github.com/ItsUgesh" target="_blank" rel="noopener">
-                    Ugesh
+                    Ugesh Simkhada
                 </a>
             </p>
         </div>
