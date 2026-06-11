@@ -3,24 +3,24 @@
 ============================================ */
 :root {
     /* Colors */
-    --color-bg:         #FDF8F5;
-    --color-burgundy:   #722F37;
+    --color-bg: #FDF8F5;
+    --color-burgundy: #722F37;
     --color-burgundy-dark: #5a2129;
-    --color-charcoal:   #1C1C1C;
+    --color-charcoal: #1C1C1C;
     --color-gray-light: #F0EDED;
-    --color-gray-mid:   #8A8A8A;
-    --color-white:      #FFFFFF;
+    --color-gray-mid: #8A8A8A;
+    --color-white: #FFFFFF;
 
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body:    'DM Sans', system-ui, sans-serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
 
     /* Spacing */
-    --space-xs:  0.5rem;
-    --space-sm:  1rem;
-    --space-md:  2rem;
-    --space-lg:  4rem;
-    --space-xl:  8rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
 
     /* Border Radius */
     --radius-sm: 4px;
@@ -38,7 +38,9 @@
 /* ============================================
    RESET & BASE
 ============================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -76,16 +78,29 @@ ul {
 /* ============================================
    TYPOGRAPHY
 ============================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--color-charcoal);
     line-height: 1.2;
     font-weight: 700;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
 
 p {
     font-size: 1rem;
@@ -351,10 +366,23 @@ section {
 }
 
 @keyframes morphShape {
-    0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
-    25%       { border-radius: 40% 60% 30% 70% / 60% 40% 50% 50%; }
-    50%       { border-radius: 50% 50% 60% 40% / 40% 60% 30% 70%; }
-    75%       { border-radius: 70% 30% 50% 50% / 30% 70% 60% 40%; }
+
+    0%,
+    100% {
+        border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    }
+
+    25% {
+        border-radius: 40% 60% 30% 70% / 60% 40% 50% 50%;
+    }
+
+    50% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 30% 70%;
+    }
+
+    75% {
+        border-radius: 70% 30% 50% 50% / 30% 70% 60% 40%;
+    }
 }
 
 /* ============================================
@@ -444,7 +472,7 @@ section {
     background-color: var(--color-white);
     padding: 1.2rem 1.5rem;
     border-radius: var(--radius-md);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
 
@@ -520,21 +548,26 @@ section {
 ============================================ */
 .site-footer {
     background-color: var(--color-charcoal);
-    border-top: 1px solid rgba(255,255,255,0.08);
     padding: var(--space-lg) 0 var(--space-md);
 }
 
 .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: start;
+    gap: var(--space-lg);
     padding-bottom: var(--space-md);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: var(--space-md);
 }
 
 .footer-brand .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
     color: var(--color-white);
+    line-height: 1;
+    letter-spacing: -0.02em;
 }
 
 .footer-brand .logo-dot {
@@ -542,42 +575,100 @@ section {
 }
 
 .footer-brand .logo-text small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
     color: var(--color-burgundy);
+    margin-top: 4px;
 }
 
 .footer-tagline {
-    margin-top: var(--space-xs);
+    margin-top: var(--space-sm);
     font-size: 0.9rem;
     color: var(--color-gray-mid);
-    max-width: 280px;
+    max-width: 260px;
+    line-height: 1.7;
+}
+
+.footer-nav-heading {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
 }
 
 .footer-menu {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.6rem;
+    list-style: none;
 }
 
 .footer-menu li a {
     font-size: 0.9rem;
     color: var(--color-gray-mid);
     transition: var(--transition);
+    display: inline-block;
 }
 
 .footer-menu li a:hover {
     color: var(--color-burgundy);
-    padding-left: 4px;
+    transform: translateX(4px);
 }
 
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
 }
 
 .copyright {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--color-gray-mid);
 }
 
+.made-by {
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+}
+
+.made-by a {
+    color: var(--color-burgundy);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.made-by a:hover {
+    text-decoration: underline;
+}
+
+@media ( max-width: 768px ) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media ( max-width: 480px ) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
 /* ============================================
    PAGE TEMPLATE
 ============================================ */
@@ -700,7 +791,7 @@ section {
 
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat( 3, 1fr );
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
 }
 
@@ -713,8 +804,8 @@ section {
 }
 
 .post-card:hover {
-    transform: translateY( -6px );
-    box-shadow: 0 20px 40px rgba( 0,0,0,0.08 );
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .post-card-image img {
@@ -725,7 +816,7 @@ section {
 }
 
 .post-card:hover .post-card-image img {
-    transform: scale( 1.03 );
+    transform: scale(1.03);
 }
 
 .post-card-body {
@@ -775,11 +866,16 @@ section {
 }
 
 /* Responsive */
-@media ( max-width: 1024px ) {
-    .posts-grid { grid-template-columns: repeat( 2, 1fr ); }
+@media (max-width: 1024px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-@media ( max-width: 768px ) {
-    .posts-grid { grid-template-columns: 1fr; }
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================
@@ -800,7 +896,7 @@ section {
 
 .error-404-number {
     font-family: var(--font-heading);
-    font-size: clamp( 6rem, 15vw, 12rem );
+    font-size: clamp(6rem, 15vw, 12rem);
     font-weight: 700;
     color: var(--color-gray-light);
     line-height: 1;
@@ -918,7 +1014,7 @@ section {
 }
 
 /* Sidebar responsive */
-@media ( max-width: 1024px ) {
+@media (max-width: 1024px) {
     .single-inner {
         grid-template-columns: 1fr;
     }
@@ -931,10 +1027,10 @@ section {
 /* ============================================
    RESPONSIVE — TABLET (max 1024px)
 ============================================ */
-@media ( max-width: 1024px ) {
+@media (max-width: 1024px) {
 
     .services-grid {
-        grid-template-columns: repeat( 2, 1fr );
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero .container {
@@ -966,7 +1062,7 @@ section {
 /* ============================================
    RESPONSIVE — MOBILE (max 768px)
 ============================================ */
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
 
     /* Navigation */
     .site-nav {
@@ -978,7 +1074,7 @@ section {
         height: 100vh;
         background-color: var(--color-bg);
         padding: 6rem var(--space-md) var(--space-md);
-        box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
         transition: right 0.4s ease;
         z-index: 999;
     }
@@ -1029,7 +1125,7 @@ section {
 /* ============================================
    RESPONSIVE — SMALL MOBILE (max 480px)
 ============================================ */
-@media ( max-width: 480px ) {
+@media (max-width: 480px) {
 
     .hero-actions {
         flex-direction: column;

@@ -5,7 +5,7 @@
 
         <div class="footer-top">
 
-            <!-- Footer Logo -->
+            <!-- Column 1: Brand -->
             <div class="footer-brand">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link">
                     <span class="logo-text">
@@ -14,35 +14,56 @@
                     </span>
                 </a>
                 <p class="footer-tagline">
-                    <?php bloginfo( 'description' ); ?>
+                    Crafting purposeful digital experiences for brands that want to last.
                 </p>
             </div>
 
-            <!-- Footer Navigation -->
-            <nav class="footer-nav" aria-label="Footer Navigation">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'footer',
-                    'menu_class'     => 'footer-menu',
-                    'container'      => false,
-                    'fallback_cb'    => false,
-                ));
-                ?>
-            </nav>
+            <!-- Column 2: Quick Links -->
+            <div class="footer-nav-group">
+                <p class="footer-nav-heading">Quick Links</p>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'footer',
+                        'menu_class'     => 'footer-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ));
+                    ?>
+                </nav>
+            </div>
 
-                    <!-- Copyright Bar -->
+            <!-- Column 3: Services -->
+            <div class="footer-nav-group">
+                <p class="footer-nav-heading">Our Services</p>
+                <ul class="footer-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Brand Identity</a></li>
+                    <li><a href="#">Digital Strategy</a></li>
+                </ul>
+            </div>
+
+        </div><!-- /.footer-top -->
+
+        <!-- Copyright Bar -->
         <div class="footer-bottom">
             <p class="copyright">
-                &copy; <?php echo date( 'Y' ); ?> 
-                <?php bloginfo( 'name' ); ?>. 
+                &copy; <?php echo date( 'Y' ); ?>
+                <?php bloginfo( 'name' ); ?>.
                 All rights reserved.
+            </p>
+            <p class="made-by">
+                Crafted with care by
+                <a href="https://github.com/ItsUgesh" target="_blank" rel="noopener">
+                    Ugesh
+                </a>
             </p>
         </div>
 
-        </div>
-
-    </div>
+    </div><!-- /.container -->
 </footer>
-<?php wp_footer(); ?>  
+
+<?php wp_footer(); ?>
+
 </body>
 </html>
