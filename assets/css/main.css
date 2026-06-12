@@ -553,7 +553,7 @@ section {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     align-items: start;
     gap: var(--space-lg);
     padding-top: var(--space-md);
@@ -655,6 +655,95 @@ section {
 
 .made-by a:hover {
     text-decoration: underline;
+}
+
+/* ============================================
+   FOOTER SUBSCRIBE
+============================================ */
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.subscribe-desc {
+    font-size: 0.85rem;
+    color: var(--color-gray-mid);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.subscribe-form p {
+    margin: 0;
+    padding: 0;
+    display: contents;
+}
+
+.subscribe-input {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-white);
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+    flex: 1;  
+}
+
+.subscribe-input::placeholder {
+    color: var(--color-gray-mid);
+}
+
+.subscribe-input:focus {
+    border-color: var(--color-burgundy);
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.subscribe-btn {
+    background-color: var(--color-burgundy);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    white-space: nowrap;    
+    letter-spacing: 0.03em;
+}
+
+.subscribe-btn:hover {
+    background-color: var(--color-burgundy-dark);
+    transform: translateY(-1px);
+}
+
+.mc4wp-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.mc4wp-form-fields .subscribe-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.mc4wp-form-fields .subscribe-btn {
+    flex-shrink: 0;
+    width: auto;
 }
 
 @media (max-width: 768px) {

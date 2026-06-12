@@ -60,6 +60,12 @@
                     ?>
                 </ul>
             </div>
+
+            <!-- Column 4: Footer Widget -->
+            <?php if (is_active_sidebar('footer-widgets')) : ?>
+                <?php dynamic_sidebar('footer-widgets'); ?>
+            <?php endif; ?>
+            
         </div>
 
         <!-- Copyright Bar -->

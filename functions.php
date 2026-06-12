@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Arcline Studio — functions.php
  * Theme setup, enqueues, menus, CPT, sidebars
@@ -8,13 +9,14 @@
 // THEME SETUP
 // ============================================
 
-function arcline_setup(){
+function arcline_setup()
+{
 
-    add_theme_support( 'title-tag');
+    add_theme_support('title-tag');
 
-    add_theme_support( 'post-thumbnails');
+    add_theme_support('post-thumbnails');
 
-    add_theme_support( 'html5' ,array(
+    add_theme_support('html5', array(
         'search-form',
         'comment-form',
         'gallery',
@@ -27,12 +29,13 @@ function arcline_setup(){
     ));
 }
 
-add_action('after_setup_theme' , 'arcline_setup'); //hooks
+add_action('after_setup_theme', 'arcline_setup'); //hooks
 
 // ============================================
 // ENQUEUE STYLES & SCRIPTS
 // ============================================
-function arcline_enqueue_assets() {
+function arcline_enqueue_assets()
+{
 
     // Google Fonts
     wp_enqueue_style(
@@ -46,16 +49,17 @@ function arcline_enqueue_assets() {
     wp_enqueue_style(
         'arcline-style',
         get_template_directory_uri() . '/assets/css/main.css',
-        array( 'arcline-fonts' ),
+        array('arcline-fonts'),
         '1.0.0'
-    ); 
+    );
 }
-add_action( 'wp_enqueue_scripts', 'arcline_enqueue_assets' ); //hooks
+add_action('wp_enqueue_scripts', 'arcline_enqueue_assets'); //hooks
 
 // ============================================
 // CUSTOM POST TYPE — SERVICES
 // ============================================
-function arcline_register_services() {
+function arcline_register_services()
+{
 
     $labels = array(
         'name'          => 'Services',
@@ -72,20 +76,21 @@ function arcline_register_services() {
         'has_archive'   => true,
         'menu_icon'     => 'dashicons-star-filled',
         'menu_position' => 5,
-        'supports'      => array( 'title', 'editor', 'thumbnail' ),
-        'rewrite'       => array( 'slug' => 'services' ),
+        'supports'      => array('title', 'editor', 'thumbnail'),
+        'rewrite'       => array('slug' => 'services'),
         'show_in_rest'  => true,
     );
 
-    register_post_type( 'services', $args );
+    register_post_type('services', $args);
 }
-add_action( 'init', 'arcline_register_services' );
+add_action('init', 'arcline_register_services');
 
 // ============================================
 // REGISTER SIDEBAR / WIDGET AREA
 // ============================================
-function arcline_widgets_init() {
-    register_sidebar( array(
+function arcline_widgets_init()
+{
+    register_sidebar(array(
         'name'          => 'Main Sidebar',
         'id'            => 'sidebar-1',
         'description'   => 'Widgets here appear on blog posts.',
@@ -94,5 +99,14 @@ function arcline_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ));
+    
+    register_sidebar(array(
+        'name'          => 'Footer Widgets',
+        'id'            => 'footer-widgets',
+        'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<p class="footer-nav-heading">',
+        'after_title'   => '</p>',
+    ));
 }
-add_action( 'widgets_init', 'arcline_widgets_init' );
+add_action('widgets_init', 'arcline_widgets_init');
