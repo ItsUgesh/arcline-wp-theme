@@ -889,6 +889,82 @@ section {
 }
 
 /* ============================================
+   SINGLE SERVICE
+============================================ */
+.service-single-wrapper {
+    padding: var(--space-lg) 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-burgundy);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    gap: 0.8rem;
+}
+
+.service-single-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.service-single-icon {
+    font-size: 3.5rem;
+    color: var(--color-burgundy);
+    margin-bottom: var(--space-sm);
+    line-height: 1;
+}
+
+.service-single-title {
+    margin-bottom: var(--space-sm);
+}
+
+.service-single-desc {
+    font-size: 1.15rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.service-single-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   SERVICES ARCHIVE
+============================================ */
+.services-archive-wrapper {
+    padding: var(--space-lg) 0;
+}
+
+.services-archive-wrapper .section-header {
+    margin-bottom: var(--space-lg);
+}
+
+.services-archive-wrapper .service-title a {
+    color: var(--color-charcoal);
+    transition: var(--transition);
+}
+
+.services-archive-wrapper .service-title a:hover {
+    color: var(--color-burgundy);
+}
+
+.services-archive-wrapper .service-card {
+    border: 1px solid var(--color-gray-light);
+}
+
+/* ============================================
    404 PAGE
 ============================================ */
 .error-404-wrapper {
