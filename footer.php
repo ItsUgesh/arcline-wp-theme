@@ -77,7 +77,7 @@
             </p>
             <p class="made-by">
                 Crafted with care by
-                <a href="https://github.com/ItsUgesh" target="_blank" rel="noopener">
+                <a href="https://ugeshsimkhada.com.np" target="_blank" rel="noopener">
                     Ugesh Simkhada
                 </a>
             </p>
