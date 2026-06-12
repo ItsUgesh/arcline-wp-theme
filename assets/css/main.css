@@ -968,6 +968,229 @@ section {
 }
 
 /* ============================================
+   ABOUT PAGE
+============================================ */
+.about-wrapper {
+    overflow: hidden;
+}
+
+/* Hero */
+.about-hero {
+    padding: var(--space-lg) 0;
+    background-color: var(--color-bg);
+}
+
+.about-hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.about-title {
+    margin: var(--space-xs) 0 var(--space-sm);
+}
+
+.about-title em {
+    font-style: italic;
+    color: var(--color-burgundy);
+}
+
+.about-lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.stat-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    border-color: var(--color-burgundy);
+    transform: translateX(6px);
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-burgundy);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--color-gray-mid);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Mission */
+.about-mission {
+    padding: var(--space-lg) 0;
+    background-color: var(--color-white);
+}
+
+.mission-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.mission-text p {
+    margin-bottom: var(--space-sm);
+    line-height: 1.8;
+}
+
+.mission-values {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.value-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.value-icon {
+    font-size: 1.2rem;
+    color: var(--color-burgundy);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.value-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.value-desc {
+    font-size: 0.9rem;
+    color: var(--color-gray-mid);
+    line-height: 1.6;
+}
+
+/* Team */
+.about-team {
+    padding: var(--space-lg) 0;
+    background-color: var(--color-bg);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.team-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 380px;
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transform: translateY(-6px);
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-burgundy);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-sm);
+}
+
+.team-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.team-role {
+    font-size: 0.85rem;
+    color: var(--color-burgundy);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.team-bio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+/* About CTA */
+.about-cta {
+    padding: var(--space-lg) 0;
+    background-color: var(--color-charcoal);
+}
+
+.about-cta-inner {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.about-cta-inner h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-xs);
+}
+
+.about-cta-inner p {
+    color: var(--color-gray-mid);
+    margin-bottom: var(--space-md);
+}
+
+/* Responsive */
+@media ( max-width: 1024px ) {
+    .about-hero-inner,
+    .mission-inner {
+        grid-template-columns: 1fr;
+    }
+    .about-hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .stat-card {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
+@media ( max-width: 768px ) {
+    .about-hero-stats {
+        flex-direction: column;
+    }
+}
+
+/* ============================================
    SINGLE POST
 ============================================ */
 .single-wrapper {
