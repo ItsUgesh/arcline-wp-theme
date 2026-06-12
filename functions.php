@@ -52,6 +52,14 @@ function arcline_enqueue_assets()
         array('arcline-fonts'),
         '1.0.0'
     );
+
+        wp_enqueue_script(
+        'arcline-script',
+        get_template_directory_uri() . '/assets/js/main.js',
+        array(),
+        '1.0.0',
+        true    // ← true = loads in footer (important!)
+    );
 }
 add_action('wp_enqueue_scripts', 'arcline_enqueue_assets'); //hooks
 
@@ -99,7 +107,7 @@ function arcline_widgets_init()
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ));
-    
+
     register_sidebar(array(
         'name'          => 'Footer Widgets',
         'id'            => 'footer-widgets',

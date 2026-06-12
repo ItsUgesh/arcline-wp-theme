@@ -41,7 +41,7 @@
         </nav>
 
         <!-- HAMBURGER (mobile) -->
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
