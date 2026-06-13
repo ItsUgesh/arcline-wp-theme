@@ -361,7 +361,10 @@ section {
     width: 380px;
     height: 380px;
     border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-    background: linear-gradient(135deg, var(--color-gray-light) 0%, #e8e0dc 100%);
+    background-image: url('../photos/hero-photo.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 40px rgba(114, 47, 55, 0.15);
     animation: morphShape 8s ease-in-out infinite;
 }
 
