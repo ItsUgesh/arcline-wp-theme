@@ -21,6 +21,19 @@ A clean, elegant custom WordPress theme built from scratch for Arcline Studio cr
 - Proper script/style enqueuing via `functions.php`
 - Widget-ready sidebar area (blog posts + footer)
 
+## Security & Performance
+
+- **CSRF Protection** — WordPress nonces (`wp_nonce_field`) on the custom contact form
+- **Input Sanitization** — server-side validation with `sanitize_text_field`, `sanitize_email`, `is_email`
+- **Custom SMTP** — secure email delivery via WP Mail SMTP with Gmail App Passwords (TLS port 587)
+- **Page Caching** — WP Super Cache for near-instant repeat page loads (sub-150ms)
+- **Asset Optimization** — Autoptimize for CSS/JS minification and concatenation (60%+ request reduction)
+- **Script Deferral** — custom `script_loader_tag` hook to defer non-critical scripts
+- **WP Head Cleanup** — removed default meta overhead (emojis, RSD, WLW, version numbers)
+- **Gutenberg Style Dequeue** — removed core block library styles (custom CSS only)
+- **Hardened wp-config** — `DISALLOW_FILE_EDIT` enabled
+- **.htaccess Hardening** — disabled directory indexing, blocked access to sensitive files and `xmlrpc.  php`
+
 ## Theme Files
 
 | File | Purpose |
